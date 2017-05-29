@@ -1,0 +1,23 @@
+{
+  "name": "Moneta",
+  "short_name": "Moneta",
+  "start_url": "./?utm_source=web_app_manifest",
+  "display": "standalone",
+  "orientation": "portrait",
+  "theme_color": "#00C853",
+  "background_color": "#ffffff",
+  "description": "Money management",
+  "icons": [{
+    "src": "assets/icons/android-chrome-192x192.png",
+    "sizes": "192x192",
+    "type": "image/png"
+  }, {
+    "src": "assets/icons/android-chrome-256x256.png",
+    "sizes": "256x256",
+    "type": "image/png"
+  }, {
+    "src": "assets/icons/android-chrome-512x512.png",
+    "sizes": "512x512",
+    "type": "image/png"
+  }]
+}
