@@ -44,7 +44,7 @@ AUTH0_API_AUDIENCE         |                  | Auth0 API audience id for the ap
 AUTH0_DOMAIN               |                  | Auth0 tenant. Required when not offline.
 AUTH0_CLIENT_ID            |                  | Auth0 application id. Required when not offline.
 AUTH0_CALLBACK_PATH        | /callback        | Path to Auth0 callback.
-AUTH0_SILENT_CALLBACK_PATH | /silent-callback | Path to Auth0 silent-callback.
+AUTH0_SILENT_CALLBACK_URL  | ${API_URL}/silent-callback  | URL to Auth0 silent-callback.
 DEVELOPMENT_PORT           | 4200             | Port when running in development environment.
 NODE_ENV                   | development      | Node environment
 

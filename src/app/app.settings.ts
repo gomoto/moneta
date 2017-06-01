@@ -17,16 +17,18 @@ if (!_settings.AUTH0_DOMAIN) {
   throw new Error('AUTH0_DOMAIN is missing');
 }
 
+const apiUrl = _settings.API_URL || 'http://localhost:3000';
+
 const settings = {
   api: {
-    url: _settings.API_URL || 'http://localhost:3000'
+    url: apiUrl
   },
   auth0: {
     apiAudience: _settings.AUTH0_API_AUDIENCE,// REQUIRED
     clientId: _settings.AUTH0_CLIENT_ID,// REQUIRED
     domain: _settings.AUTH0_DOMAIN,// REQUIRED
     callbackPath: _settings.AUTH0_CALLBACK_PATH || '/callback',
-    silentCallbackUrl: _settings.AUTH0_SILENT_CALLBACK_URL || `${window.location.protocol}//${window.location.host}/silent-callback`
+    silentCallbackUrl: _settings.AUTH0_SILENT_CALLBACK_URL || `${apiUrl}/silent-callback`
   },
   offline: _settings.IS_OFFLINE === 'true'
 };
