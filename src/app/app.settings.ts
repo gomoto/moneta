@@ -33,6 +33,6 @@ const settings = {
   offline: _settings.IS_OFFLINE === 'true'
 };
 
-console.debug('settings:', settings);
+console.log('settings:', settings);
 
 export { settings }
