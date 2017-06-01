@@ -13,8 +13,8 @@ if (!_settings.AUTH0_CLIENT_ID) {
   throw new Error('AUTH0_CLIENT_ID is missing');
 }
 
-if (!_settings.AUTH0_DOMAIN) {
-  throw new Error('AUTH0_DOMAIN is missing');
+if (!_settings.AUTH0_TENANT) {
+  throw new Error('AUTH0_TENANT is missing');
 }
 
 const apiUrl = _settings.API_URL || 'http://localhost:3000';
@@ -26,7 +26,7 @@ const settings = {
   auth0: {
     apiAudience: _settings.AUTH0_API_AUDIENCE,// REQUIRED
     clientId: _settings.AUTH0_CLIENT_ID,// REQUIRED
-    domain: _settings.AUTH0_DOMAIN,// REQUIRED
+    tenant: _settings.AUTH0_TENANT,// REQUIRED
     callbackPath: _settings.AUTH0_CALLBACK_PATH || '/callback',
     silentCallbackUrl: _settings.AUTH0_SILENT_CALLBACK_URL || `${apiUrl}/silent-callback`
   },

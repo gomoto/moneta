@@ -41,7 +41,7 @@ const authOptions = {
  */
 const webAuth = new auth0.WebAuth({
   clientID: settings.auth0.clientId,
-  domain: settings.auth0.domain
+  domain: `${settings.auth0.tenant}.auth0.com`
 });
 
 /**
