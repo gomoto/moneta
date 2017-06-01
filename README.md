@@ -37,16 +37,16 @@ In addition to building the application, you can build a file called `settings.j
 
 ## Environment variables
 
-environment variable       | default          | description
--------------------------- | ---------------- | -------------------------------------------------------------------------
-API_URL                    | http://localhost:3000   | Location of the main application API.
-AUTH0_API_AUDIENCE         |                  | Auth0 API audience id for the application API. Required when not offline.
-AUTH0_DOMAIN               |                  | Auth0 tenant. Required when not offline.
-AUTH0_CLIENT_ID            |                  | Auth0 application id. Required when not offline.
-AUTH0_CALLBACK_PATH        | /callback        | Path to Auth0 callback.
+environment variable       | default                     | description
+-------------------------- | --------------------------- | -------------------------------------------------------------------------
+API_URL                    | http://localhost:3000       | Location of the main application API.
+AUTH0_API_AUDIENCE         |                             | Auth0 API audience id for the application API. Required when not offline.
+AUTH0_DOMAIN               |                             | Auth0 tenant. Required when not offline.
+AUTH0_CLIENT_ID            |                             | Auth0 application id. Required when not offline.
+AUTH0_CALLBACK_PATH        | /callback                   | Path to Auth0 callback.
 AUTH0_SILENT_CALLBACK_URL  | ${API_URL}/silent-callback  | URL to Auth0 silent-callback.
-DEVELOPMENT_PORT           | 4200             | Port when running in development environment.
-NODE_ENV                   | development      | Node environment
+DEVELOPMENT_PORT           | 4200                        | Port when running in development environment.
+NODE_ENV                   | development                 | Node environment
 
 ## Auth0 rules
 
