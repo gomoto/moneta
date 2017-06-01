@@ -38,10 +38,11 @@ In addition to building the application, you can build a file called `settings.j
 ## Environment variables
 
 environment variable       | default          | description
--------------------------- | ---------------- | -----------------------------------------------------------
+-------------------------- | ---------------- | -------------------------------------------------------------------------
 API_URL                    | localhost:3000   | Location of the main application API.
-AUTH0_DOMAIN               |                  | Auth0 tenant. Required when not using offline-user.
-AUTH0_CLIENT_ID            |                  | Auth0 application id. Required when not using offline-user.
+AUTH0_API_AUDIENCE         |                  | Auth0 API audience id for the application API. Required when not offline.
+AUTH0_DOMAIN               |                  | Auth0 tenant. Required when not offline.
+AUTH0_CLIENT_ID            |                  | Auth0 application id. Required when not offline.
 AUTH0_CALLBACK_PATH        | /callback        | Path to Auth0 callback.
 AUTH0_SILENT_CALLBACK_PATH | /silent-callback | Path to Auth0 silent-callback.
 DEVELOPMENT_PORT           | 4200             | Port when running in development environment.
