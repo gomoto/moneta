@@ -19,7 +19,7 @@ if (!_settings.AUTH0_DOMAIN) {
 
 const settings = {
   api: {
-    url: _settings.API_URL || 'localhost:3000'
+    url: _settings.API_URL || 'http://localhost:3000'
   },
   auth0: {
     apiAudience: _settings.AUTH0_API_AUDIENCE,// REQUIRED

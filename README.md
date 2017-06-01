@@ -39,7 +39,7 @@ In addition to building the application, you can build a file called `settings.j
 
 environment variable       | default          | description
 -------------------------- | ---------------- | -------------------------------------------------------------------------
-API_URL                    | localhost:3000   | Location of the main application API.
+API_URL                    | http://localhost:3000   | Location of the main application API.
 AUTH0_API_AUDIENCE         |                  | Auth0 API audience id for the application API. Required when not offline.
 AUTH0_DOMAIN               |                  | Auth0 tenant. Required when not offline.
 AUTH0_CLIENT_ID            |                  | Auth0 application id. Required when not offline.
