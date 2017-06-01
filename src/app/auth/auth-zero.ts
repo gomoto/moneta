@@ -33,7 +33,7 @@ function getAccessToken(): string {
 const authOptions = {
   // TODO: Generalize audience as an app setting.
   audience: 'https://moneta-serverless/api',
-  scope: 'openid profile get:todos',
+  scope: 'openid https://user_metadata get:todos',
   responseType: 'token id_token'
 };
 

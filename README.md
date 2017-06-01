@@ -46,3 +46,29 @@ AUTH0_CALLBACK_PATH        | /callback        | Path to Auth0 callback.
 AUTH0_SILENT_CALLBACK_PATH | /silent-callback | Path to Auth0 silent-callback.
 DEVELOPMENT_PORT           | 4200             | Port when running in development environment.
 NODE_ENV                   | development      | Node environment
+
+## Auth0 rules
+
+### Add user_metadata to id_token
+
+```javascript
+function (user, context, callback) {
+  var CLIENTS = [
+    'xxx'
+  ];
+  var userMetadataScope = 'https://user_metadata';
+
+  // Only run this rule if:
+  if (
+    // (1) client is listed above.
+    CLIENTS.indexOf(context.clientID) > -1 &&
+    // (2) user info was requested in scope
+    context.request.query.scope.split(' ').indexOf(userMetadataScope) > -1
+  ) {
+    // Set user_metadata on id_token, which is not automatically derived from user object!
+    context.idToken[userMetadataScope] = user.user_metadata;
+  }
+
+  callback(null, user, context);
+}
+```
