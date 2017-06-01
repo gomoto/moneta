@@ -3,4 +3,7 @@
 OUTPUT_PATH=dist
 
 # Build and rebuild application.
-ng build --watch --output-path=$OUTPUT_PATH --aot --target=production
+ng build --watch --output-path=$OUTPUT_PATH --aot #--target=production
+
+# Notes:
+# --target=production strips console.debug messages.

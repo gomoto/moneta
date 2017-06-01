@@ -26,4 +26,6 @@ const settings = {
   offline: _settings.IS_OFFLINE === 'true'
 };
 
+console.debug('settings:', settings);
+
 export { settings }
